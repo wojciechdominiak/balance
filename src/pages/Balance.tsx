@@ -13,6 +13,8 @@ export default class Balance extends React.Component {
                 <OutcomeItem
                   key={item.id}
                   name={item.name}
+                  data={item.date}
+                  price={item.price}
                   onRemoveOutcome={ctx.removeOutcome.bind(null, item.id)}
                 ></OutcomeItem>
               ))}
