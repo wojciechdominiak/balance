@@ -2,7 +2,7 @@ import React from "react";
 import MainNavigation from "./MainNavigation";
 
 type MyProps = {
-  children: JSX.Element | string;
+  children: JSX.Element;
 };
 
 export default class Layout extends React.Component<MyProps> {
