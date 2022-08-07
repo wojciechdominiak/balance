@@ -5,19 +5,19 @@ import NewOutcome from "./pages/NewOutcome";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Balance from "./pages/Balance";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
-    <div className="app">
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/balance" element={<Balance />}></Route>
-          <Route path="/new-outcome" element={<NewOutcome />}></Route>
-          <Route path="*" element={<NotFound />}></Route>
-        </Routes>
-      </Layout>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Balance />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/registration" element={<Registration />}></Route>
+        <Route path="/new-outcome" element={<NewOutcome />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </Layout>
   );
 }
 
