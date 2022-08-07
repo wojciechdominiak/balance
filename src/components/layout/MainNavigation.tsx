@@ -6,11 +6,11 @@ export default class MainNavigation extends React.Component {
     return (
       <header>
         <h1>
-          <Link to="balance">Bilans</Link>
+          <Link to="/">Bilans</Link>
         </h1>
         <ul>
           <Link to="/new-outcome">Add new outcome</Link>
-          <Link to="/">Login</Link>
+          <Link to="/login">Login</Link>
         </ul>
       </header>
     );

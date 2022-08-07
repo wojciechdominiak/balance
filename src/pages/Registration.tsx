@@ -1,20 +1,22 @@
 import React, { createRef } from "react";
 import { Link } from "react-router-dom";
 
-export default class Login extends React.Component {
+export default class Registration extends React.Component {
   outcomeInputEmail = createRef<HTMLInputElement>();
   outcomeInputPassword = createRef<HTMLInputElement>();
+  outcomeInputPasswordRepeat = createRef<HTMLInputElement>();
 
-  submitLoginHandler: React.FormEventHandler<HTMLFormElement> = (
+  submitRegistrationHandler: React.FormEventHandler<HTMLFormElement> = (
     event: React.FormEvent
   ) => {
     event.preventDefault();
     console.log(this.outcomeInputEmail.current!.value);
   };
+
   render() {
     return (
       <>
-        <form onSubmit={this.submitLoginHandler}>
+        <form onSubmit={this.submitRegistrationHandler}>
           <div>
             <label htmlFor="email">E-mail: </label>
             <input type="email" id="email" ref={this.outcomeInputEmail}></input>
@@ -27,10 +29,18 @@ export default class Login extends React.Component {
               ref={this.outcomeInputPassword}
             ></input>
           </div>
-          <button>Login</button>
+          <div>
+            <label htmlFor="password">Repeat Password: </label>
+            <input
+              type="password"
+              id="password"
+              ref={this.outcomeInputPasswordRepeat}
+            ></input>
+          </div>
+          <button>Register</button>
         </form>
-        <Link to="/registration">Register instead</Link>
-      </> 
+        <Link to="/login">Login instead</Link>
+      </>
     );
   }
 }
